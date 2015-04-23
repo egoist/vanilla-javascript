@@ -42,3 +42,14 @@ function ArrayUnique(array) {
    return a;
 }
 ```
+
+### Each loop
+
+```javascript
+// works like $.each
+function each(arr, fn) {
+  for(var i in arr) {
+    fn(i, arr[i]);
+  }
+}
+```
