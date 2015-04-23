@@ -58,8 +58,7 @@ function each(arr, fn) {
 
 ```javascript
 function ObjectLength(obj) {
-  var length = 0,
-    key;
+  var length = 0, key;
   for (key in obj) {
     if (obj.hasOwnProperty(key)) length++;
   }
