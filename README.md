@@ -53,3 +53,16 @@ function each(arr, fn) {
   }
 }
 ```
+
+### Get Object length
+
+```javascript
+function ObjectLength(obj) {
+  var length = 0,
+    key;
+  for (key in obj) {
+    if (obj.hasOwnProperty(key)) length++;
+  }
+  return length;
+}
+```
