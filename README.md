@@ -27,7 +27,7 @@ function clone(obj) {
 }
 ```
 
-### Get unique values in an array
+## Get unique values in an array
 
 ```javascript
 function ArrayUnique(array) {
