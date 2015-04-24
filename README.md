@@ -54,7 +54,7 @@ function each(arr, fn) {
 }
 ```
 
-### Get Object length
+## Get Object length
 
 ```javascript
 function ObjectLength(obj) {
@@ -66,7 +66,7 @@ function ObjectLength(obj) {
 }
 ```
 
-### Class
+## Class
 
 ```javascript
 // classList is much faster than className as we know, ref: http://t.cn/RAYkuEr
@@ -102,7 +102,7 @@ function toggleClass(el, className) {
 }
 ```
 
-### Trim
+## Trim
 
 ```javascript
 // works like $.trim(string)
@@ -110,7 +110,7 @@ var string = ' ai shi te ru    ';
 string.trim(); // print 'ai shi te ru'
 ```
 
-### Get element offset
+## Get element offset
 
 ```javascript
 function getOffset(el) {
