@@ -46,12 +46,17 @@ function ArrayUnique(array) {
 ### Each loop
 
 ```javascript
-// works like $.each
+// for an array
 function each(arr, fn) {
   for(var i in arr) {
     fn(i, arr[i]);
   }
 }
+// for dom element, works like $.each
+var elements = document.querySelectorAll(selector);
+Array.prototype.forEach.call(elements, function(el, i) {
+    // your action
+});
 ```
 
 ## Get Object length
