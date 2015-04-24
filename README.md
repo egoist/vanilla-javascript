@@ -103,7 +103,7 @@ function toggleClass(el, className) {
 ```
 
 ### Trim
-```javacript
+```javascript
 // works like $.trim(string)
 var string = ' ai shi te ru    ';
 string.trim(); // print 'ai shi te ru'
