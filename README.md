@@ -103,8 +103,28 @@ function toggleClass(el, className) {
 ```
 
 ### Trim
+
 ```javascript
 // works like $.trim(string)
 var string = ' ai shi te ru    ';
 string.trim(); // print 'ai shi te ru'
+```
+
+### Get element offset
+
+```javascript
+function getOffset(el) {
+  var _x = 0;
+  var _y = 0;
+  while (el && !isNaN(el.offsetLeft) && !isNaN(el.offsetTop)) {
+    _x += el.offsetLeft - el.scrollLeft;
+    _y += el.offsetTop - el.scrollTop;
+    el = el.offsetParent;
+  }
+  return {
+    top: _y,
+    left: _x
+  };
+}
+// example: var offset = getOffset(document.getElementById('yourElId'));
 ```
