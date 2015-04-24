@@ -69,7 +69,7 @@ function ObjectLength(obj) {
 ### Class
 
 ```javascript
-// classList is much faster than className as we know
+// classList is much faster than className as we know, ref: http://t.cn/RAYkuEr
 // addClass
 function addClass(el, className) {
   if (el.classList)
