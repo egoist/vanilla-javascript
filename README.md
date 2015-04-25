@@ -251,9 +251,8 @@ function shuffle(array) {
 ```javascript
 // I haven't checked this
 function randomDivs(el) {
-  var dom = document.querySelectorAll(el)
   var newDivs = []
-  for (var i = 0; i < dom.length; i++) {
+  for (var i = 0, dom = document.querySelectorAll(el); i < dom.length; i++) {
     var randomIndex = NumberBetween(0, dom.length)
     newDivs[newDivs.length] = dom[randomIndex].cloneNode(true)
     dom[randomIndex].parentNode.removeChild(dom[randomIndex])
