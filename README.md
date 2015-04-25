@@ -179,3 +179,22 @@ function cookie( name, value, days ){
 	}
 }
 ```
+
+## Flatify an array
+
+```javascript
+var arr = [1, 2, [3, [4, 5]], 5]
+var result = []
+var flat = function(arr) {
+  var i, l = arr.length
+  for (i = 0; i < l; i++) {
+    if (typeof arr[i] === 'number') {
+      result.push(arr[i])
+    } else {
+      flat(arr[i])
+    }
+  }
+  return result
+}
+arr = flat(arr)
+```
