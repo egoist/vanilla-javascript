@@ -66,7 +66,7 @@ function ArrayUnique(array) {
 }
 ```
 
-### Each loop
+## Each loop
 
 ```javascript
 // for an array
