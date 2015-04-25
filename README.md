@@ -225,3 +225,23 @@ function NumberBetween(start, end) {
   return Math.floor(Math.random() * end) + start
 }
 ```
+
+## Make an array random ordered (shuffle)
+
+```javascript
+function shuffle(array) {
+  var currentIndex = array.length,
+    temporaryValue, randomIndex;
+  // 当数组不为空时
+  while (0 !== currentIndex) {
+    // 随机选择
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    // 和当前元素交换
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+```
