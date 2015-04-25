@@ -23,9 +23,9 @@
 ## Selector
 
 ```javascript
-// works like $('#id')
+// works like $('#id') but do $('id')
 var $  = document.getElementById.bind(document);
-// works like $('.class')
+// works like $('.class') but do $('class')
 var $$ = document.querySelectorAll.bind(document);
 ```
 
