@@ -216,3 +216,12 @@ for (var i in query) {
   query[i][key] = value
 }
 ```
+
+## Get number beween $start and $end
+
+```javscript
+// NumberBetween(0, 100) return a ( 0 <= number < 100 )
+function NumberBetween(start, end) {
+  return Math.floor(Math.random() * end) + start
+}
+```
