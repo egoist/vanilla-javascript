@@ -183,7 +183,7 @@ function cookie( name, value, days ){
 ## Flatify an array
 
 ```javascript
-var arr = [1, 2, [3, [4, 5]], 5]
+var arr = [1, 2, [3, [4, 5]], 6]
 var result = []
 var flat = function(arr) {
   var i, l = arr.length
@@ -196,5 +196,5 @@ var flat = function(arr) {
   }
   return result
 }
-arr = flat(arr)
+arr = flat(arr) // result is [1,2,3,4,5,6]
 ```
