@@ -198,3 +198,21 @@ var flat = function(arr) {
 }
 arr = flat(arr) // result is [1,2,3,4,5,6]
 ```
+
+## Parse url
+
+```javascript
+// parse url queries to an array, http://example.com/?q=words&ord=desc => ['words', 'desc']
+var query = location.search.substring('1').split('&')
+for (var i in query) {
+  query[i] = query[i].split('=')[1]
+}
+// parse url queries to an object, http://example.com/?q=words&ord=desc => {q: 'words', ord: 'desc'}
+var query = location.search.substring('1').split('&')
+for (var i in query) {
+  var key = query[i].split('=')[0],
+    value = query[i].split('=')[1]
+  query[i] = {}
+  query[i][key] = value
+}
+```
