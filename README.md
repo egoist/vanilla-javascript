@@ -1,27 +1,24 @@
+# vanilla-javascript
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [vanilla-javascript](#vanilla-javascript)
-  - [Selector](#selector)
-  - [Clone object](#clone-object)
-  - [Get unique values in an array](#get-unique-values-in-an-array)
-    - [Each loop](#each-loop)
-  - [Get Object length](#get-object-length)
-  - [Class](#class)
-  - [Trim](#trim)
-  - [Get element offset](#get-element-offset)
-  - [Check](#check)
-  - [Cookie](#cookie)
-  - [Flatify an array](#flatify-an-array)
-  - [Parse url](#parse-url)
-  - [Get number between $start and $end](#get-number-between-start-and-end)
-  - [Make an array random ordered (shuffle)](#make-an-array-random-ordered-shuffle)
-  - [Make HTML elements (Divs) random ordered](#make-html-elements-divs-random-ordered)
+- [Selector](#selector)
+- [Clone object](#clone-object)
+- [Get unique values in an array](#get-unique-values-in-an-array)
+- [Each loop](#each-loop)
+- [Get Object length](#get-object-length)
+- [Class](#class)
+- [Trim](#trim)
+- [Get element offset](#get-element-offset)
+- [Check](#check)
+- [Cookie](#cookie)
+- [Flatify an array](#flatify-an-array)
+- [Parse url](#parse-url)
+- [Get number between $start and $end](#get-number-between-start-and-end)
+- [Make an array random ordered (shuffle)](#make-an-array-random-ordered-shuffle)
+- [Make HTML elements (Divs) random ordered](#make-html-elements-divs-random-ordered)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# vanilla-javascript
 
 ## Selector
 
