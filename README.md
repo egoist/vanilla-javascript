@@ -217,7 +217,7 @@ for (var i in query) {
 }
 ```
 
-## Get number beween $start and $end
+## Get number between $start and $end
 
 ```javascript
 // NumberBetween(0, 100) return a ( 0 <= number < 100 )
