@@ -230,11 +230,11 @@ for (var i in query) {
 }
 // parse url queries to an object, http://example.com/?q=words&ord=desc => {q: 'words', ord: 'desc'}
 var query = location.search.substring('1').split('&')
+var params = {}
 for (var i in query) {
   var key = query[i].split('=')[0],
     value = query[i].split('=')[1]
-  query[i] = {}
-  query[i][key] = value
+  params[key] = value
 }
 ```
 
