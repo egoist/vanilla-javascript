@@ -1,4 +1,8 @@
 # vanilla-javascript
+
+You just wrote some awesome vanilla JavaScript code?   
+Feel free to add it and send PR to me. The toc below is generated with [doctoc](https://github.com/thlorenz/doctoc).
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
@@ -51,16 +55,25 @@ function clone(obj) {
 ## Get unique values in an array
 
 ```javascript
+// my implement
 function ArrayUnique(array) {
-   var u = {}, a = [];
-   for(var i = 0, l = array.length; i < l; ++i){
-      if(u.hasOwnProperty(array[i])) {
-         continue;
-      }
-      a.push(array[i]);
-      u[array[i]] = 1;
-   }
-   return a;
+  var u = {},
+    a = [];
+  for (var i = 0, l = array.length; i < l; ++i) {
+    if (u.hasOwnProperty(array[i])) {
+      continue;
+    }
+    a.push(array[i]);
+    u[array[i]] = 1;
+  }
+  return a;
+}
+// alternative
+function ArrayUnique(array) {
+  return array.reduce(function(previous, current) {
+    if (previous.indexOf(current) < 0) previous.push(current);
+    return previous;
+  }, []);
 }
 ```
 
