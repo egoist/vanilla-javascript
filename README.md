@@ -17,6 +17,7 @@
 - [Get number between $start and $end](#get-number-between-start-and-end)
 - [Make an array random ordered (shuffle)](#make-an-array-random-ordered-shuffle)
 - [Make HTML elements (Divs) random ordered](#make-html-elements-divs-random-ordered)
+- [Count words with CJK support](#count-words-with-cjk-support)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -280,3 +281,11 @@ function randomDivs(el) {
   return newDivs
 }
 ```
+
+## Count words with CJK support
+
+```javascript
+var string = '我爱你，你呢？ me too!'
+var count = string.match(/[\u00ff-\uffff]|\S+/g).length //returns 9
+```
+
