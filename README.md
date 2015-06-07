@@ -1,16 +1,18 @@
 # vanilla-javascript
 
-You just wrote some awesome vanilla JavaScript code?   
+You just wrote some awesome vanilla JavaScript code?
 Feel free to add it and send PR to me. The toc below is generated with [doctoc](https://github.com/thlorenz/doctoc).
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
 
 - [Selector](#selector)
 - [Clone object](#clone-object)
 - [Get unique values in an array](#get-unique-values-in-an-array)
 - [Each loop](#each-loop)
 - [Get Object length](#get-object-length)
+- [Get keys of an object](#get-keys-of-an-object)
 - [Class](#class)
 - [Trim](#trim)
 - [Get element offset](#get-element-offset)
@@ -41,7 +43,7 @@ function clone(obj) {
     if(obj === null || typeof(obj) !== 'object')
         return obj;
 
-    var temp = obj.constructor(); 
+    var temp = obj.constructor();
 
     for(var key in obj) {
         if(Object.prototype.hasOwnProperty.call(obj, key)) {
@@ -103,6 +105,17 @@ function ObjectLength(obj) {
   }
   return length;
 }
+```
+
+## Get keys of an object
+
+```javascript
+var obj = {a:1, b:2, c:3};
+// native api, returns the keys
+Object.keys(obj);
+// alternative, store keys in `arr` variable
+var arr = [], i = 0;
+for(arr[i++] in obj){}
 ```
 
 ## Class
@@ -301,4 +314,3 @@ function randomDivs(el) {
 var string = '我爱你，你呢？ me too!'
 var count = string.match(/[\u00ff-\uffff]|\S+/g).length //returns 9
 ```
-
