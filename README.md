@@ -1,6 +1,6 @@
 # vanilla-javascript
 
-You just wrote some awesome vanilla JavaScript code?
+You just wrote some awesome vanilla JavaScript code?  
 Feel free to add it and send PR to me. The toc below is generated with [doctoc](https://github.com/thlorenz/doctoc).
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
