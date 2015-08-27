@@ -115,6 +115,11 @@ var elements = document.querySelectorAll(selector);
 Array.prototype.forEach.call(elements, function(el, i) {
     // your action
 });
+
+// or if you want to convert dom nodelist into array,
+// do like this:
+// var els = document.querySelectorAll('something')
+// els = Array.prototype.slice.call(els)
 ```
 
 ## Get Object length
