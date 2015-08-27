@@ -12,6 +12,7 @@ Feel free to add it and send PR to me. The toc below is generated with [doctoc](
 - [Clone object](#clone-object)
 - [Get unique values in an array](#get-unique-values-in-an-array)
 - [Each loop](#each-loop)
+- [Remove a specific element from an array](#remove-a-specific-element-from-an-array)
 - [Get Object length](#get-object-length)
 - [Get keys of an object](#get-keys-of-an-object)
 - [Class](#class)
@@ -120,6 +121,23 @@ Array.prototype.forEach.call(elements, function(el, i) {
 // do like this:
 // var els = document.querySelectorAll('something')
 // els = Array.prototype.slice.call(els)
+```
+
+## Remove a specific element from an array
+
+http://jsbin.com/nawapa/edit?js,console
+
+```javascript
+var array = ['mikasa', 'saber', 'yurei', 'inori', 'chris'];
+// if you know the index of the element, like you want to remove the third item
+var index = 2;
+// or you don't know the actual index but the value, you can:
+var index = array.indexOf('yurei');
+
+if(index > -1) {
+  array.splice(index, 1);
+}
+console.log(array);
 ```
 
 ## Get Object length
