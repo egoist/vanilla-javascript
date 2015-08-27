@@ -8,6 +8,7 @@ Feel free to add it and send PR to me. The toc below is generated with [doctoc](
 **Table of Contents**
 
 - [Selector](#selector)
+- [Get dom elements by element name and specfic attribute value](#get-dom-elements-by-element-name-and-specfic-attribute-value)
 - [Clone object](#clone-object)
 - [Get unique values in an array](#get-unique-values-in-an-array)
 - [Each loop](#each-loop)
@@ -34,6 +35,27 @@ Feel free to add it and send PR to me. The toc below is generated with [doctoc](
 var $  = document.getElementById.bind(document);
 // works like $('.class') but do $$('.class')
 var $$ = document.querySelectorAll.bind(document);
+```
+
+## Get dom elements by element name and specfic attribute value
+
+http://jsbin.com/zesiro/1/edit?html,js,console
+
+```javascript
+function domSelector(name='input', attr='type', value='text') {
+  var els = document.querySelectorAll(name);
+  els = Array.prototype.slice.call(els).filter(function(el){
+    if (el.getAttribute(attr) === value) {
+      return true;
+    }
+  });
+  return els;
+}
+
+var elements = domSelector('input', 'type', 'text');
+Array.prototype.forEach.call(elements, function(el, i) {
+  console.log(el.id);
+});
 ```
 
 ## Clone object
