@@ -26,6 +26,7 @@ Feel free to add it and send PR to me. The toc below is generated with [doctoc](
 - [Make an array random ordered (shuffle)](#make-an-array-random-ordered-shuffle)
 - [Make HTML elements (Divs) random ordered](#make-html-elements-divs-random-ordered)
 - [Count words with CJK support](#count-words-with-cjk-support)
+- [Executes function when document ready](#executes-function-when-document-ready)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -358,4 +359,20 @@ function randomDivs(el) {
 ```javascript
 var string = '我爱你，你呢？ me too!'
 var count = string.match(/[\u00ff-\uffff]|\S+/g).length //returns 9
+```
+
+## Executes function when document ready
+
+```javascript
+ready(function () {
+  console.log('I am ready!')
+})
+
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
 ```
