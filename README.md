@@ -276,6 +276,7 @@ function cookie( name, value, days ){
 ## Flatify an array
 
 ```javascript
+// the .push way
 var arr = [1, 2, [3, [4, 5]], 6]
 var result = []
 var flat = function(arr) {
@@ -290,6 +291,19 @@ var flat = function(arr) {
   return result
 }
 arr = flat(arr) // result is [1,2,3,4,5,6]
+
+// the .reduce & .concat way
+function flatten(arr) {
+  return arr.reduce((current, next) => {
+    return current.concat(Array.isArray(next) ? flatten(next) : next);
+  }, [])
+}
+
+var a = [1, 2, [3, [4, 5]], 6, 7, ['a', [1, [3, 6]]], {a: 1}, null]
+
+a = flatten(a)
+
+console.log(a)
 ```
 
 ## Parse url
