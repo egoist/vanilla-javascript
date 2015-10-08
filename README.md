@@ -282,7 +282,7 @@ var result = []
 var flat = function(arr) {
   var i, l = arr.length
   for (i = 0; i < l; i++) {
-    if (typeof arr[i] === 'number') {
+    if (!Array.isArray(arr[i])) {
       result.push(arr[i])
     } else {
       flat(arr[i])
