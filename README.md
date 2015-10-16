@@ -21,6 +21,7 @@ Feel free to add it and send PR to me. The toc below is generated with [doctoc](
 - [Check](#check)
 - [Cookie](#cookie)
 - [Flatify an array](#flatify-an-array)
+- [Check contains](#check-contains)
 - [Parse url](#parse-url)
 - [Get number between $start and $end](#get-number-between-start-and-end)
 - [Make an array random ordered (shuffle)](#make-an-array-random-ordered-shuffle)
@@ -304,6 +305,25 @@ var a = [1, 2, [3, [4, 5]], 6, 7, ['a', [1, [3, 6]]], {a: 1}, null]
 a = flatten(a)
 
 console.log(a)
+```
+
+## Check contains
+
+```javascript
+function contains (obj, item) {
+  // @type obj: Array, String
+
+  if (typeof obj === 'string') {
+    return obj.indexOf(item) > -1
+  }
+
+  for(var i in obj) {
+    if (obj[i] === item) {
+      return true
+    }
+  }
+  return false
+}
 ```
 
 ## Parse url
