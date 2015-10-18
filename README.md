@@ -28,6 +28,7 @@ Feel free to add it and send PR to me. The toc below is generated with [doctoc](
 - [Make HTML elements (Divs) random ordered](#make-html-elements-divs-random-ordered)
 - [Count words with CJK support](#count-words-with-cjk-support)
 - [Executes function when document ready](#executes-function-when-document-ready)
+- [Class](#class)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -407,6 +408,33 @@ function ready(fn) {
     fn()
   } else {
     document.addEventListener('DOMContentLoaded', fn)
+  }
+}
+```
+
+## Class
+
+Generally two ways to create JavaScript Class, sure there're more ways.
+
+```javascript
+// ES5
+function classFn () {
+
+}
+classFn.prototype = {
+  constructor: classFn,
+  someMethod: function () {
+    // blahblah...
+  }
+}
+
+// ES6
+class classFn {
+  constructor () {
+    this.name = 'myname'
+  }
+  someMethod () {
+    // blahblah...
   }
 }
 ```
