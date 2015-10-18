@@ -15,7 +15,7 @@ Feel free to add it and send PR to me. The toc below is generated with [doctoc](
 - [Remove a specific element from an array](#remove-a-specific-element-from-an-array)
 - [Get Object length](#get-object-length)
 - [Get keys of an object](#get-keys-of-an-object)
-- [Class](#class)
+- [Dom classList manipulation](#dom-classlist-manipulation)
 - [Trim](#trim)
 - [Get element offset](#get-element-offset)
 - [Check](#check)
@@ -65,17 +65,17 @@ Array.prototype.forEach.call(elements, function(el, i) {
 
 ```javascript
 function clone(obj) {
-    if(obj === null || typeof(obj) !== 'object')
-        return obj;
+  if(obj === null || typeof(obj) !== 'object')
+    return obj;
 
-    var temp = obj.constructor();
+  var temp = obj.constructor();
 
-    for(var key in obj) {
-        if(Object.prototype.hasOwnProperty.call(obj, key)) {
-            temp[key] = clone(obj[key]);
-        }
+  for(var key in obj) {
+    if(Object.prototype.hasOwnProperty.call(obj, key)) {
+      temp[key] = clone(obj[key]);
     }
-    return temp;
+  }
+  return temp;
 }
 ```
 
@@ -165,7 +165,7 @@ var arr = [], i = 0;
 for(arr[i++] in obj){}
 ```
 
-## Class
+## Dom classList manipulation
 
 ```javascript
 // classList is much faster than className as we know, ref: http://t.cn/RAYkuEr
