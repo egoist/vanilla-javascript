@@ -29,6 +29,8 @@ Feel free to add it and send PR to me. The toc below is generated with [doctoc](
 - [Count words with CJK support](#count-words-with-cjk-support)
 - [Executes function when document ready](#executes-function-when-document-ready)
 - [Class](#class)
+- [Convert to unicode string](#convert-to-unicode-string)
+- [Convert to hex](#convert-to-hex)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -436,5 +438,46 @@ class classFn {
   someMethod () {
     // blahblah...
   }
+}
+```
+
+
+## Convert to unicode string
+
+```javascript
+// utf8str -> jsstr
+function utf8StrToStr(str) { 
+  return decodeURIComponent(escape(str));
+}
+// jsstr -> utf8str
+function strToUtf8str(str) {
+  return unescape(encodeURIComponent(str));
+}
+``` 
+
+## Convert to hex
+
+```javascript        
+// str -> hex
+function strToHex(str) {
+  var hex = '';
+  for (var i=0; i<str.length; i++) {
+    var str1 = str.charCodeAt(i).toString(16);
+    str1 = str1.length == 0 ? "00" :
+    str1.length == 1 ? "0" + str1 : 
+    str1.length == 2 ? str1 :
+    str1.substring(str1.length-2, str1.length);
+    hex += str1;
+  }
+  return hex;
+}
+// hex -> str
+function hexToStr(hexx) {
+  var hex = hexx.toString();
+  var str = '';
+  for (var i = 0; i < hex.length; i += 2) {
+    str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+  }     
+  return str;
 }
 ```
